@@ -1,0 +1,64 @@
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease-out, height 0.5s ease-out 0.5s;
+
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-height: 650px;
+    z-index: 3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start completely transparent */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+  }
+}
+
+.modal-content,
+#caption {
+    animation-name: fadeIn;
+    animation-duration: 0.25s; /* How long the animation takes */
+    animation-timing-function: ease-in; /* Speed curve of the animation */
+    animation-fill-mode: forwards;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 75px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}

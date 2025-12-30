@@ -1,0 +1,43 @@
+header,footer{
+    padding: 10px;
+    left: 0;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer{
+    bottom: 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    z-index: 2;
+    justify-content: space-between;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 500px; /* Expanded width */
+    height: 100%;
+    transition: width 0.3s ease;
+    background-color: #372d36;
+    z-index: 1;
+
+    position: fixed;
+
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+
+.sidebar.closed {
+    width: 0; /* Collapsed width */
+    overflow: hidden;
+}

@@ -1,0 +1,53 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Accordion{
+    width: 50%;
+    
+}
+
+.item{
+    background-color: #372d36;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: dashed 1px #e5a9bf;
+}
+
+
+.title{
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.answer {
+    background-color: #000;  
+    word-wrap: break-word;
+    padding: 2px;
+    border-radius: 25px;
+    /* Use visibility and opacity instead of display */
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    /* Correct the duration syntax from 0,5s to 0.3s */
+    transition: all 0.2s cubic-bezier(0, 1, 0, 1)
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.answer.show {
+    /* Change visibility and opacity to their visible states */
+    visibility: visible;
+    max-height: 9999px;
+    opacity: 1;
+    transition: all 0.2s cubic-bezier(1, 0, 1, 0)
+}
