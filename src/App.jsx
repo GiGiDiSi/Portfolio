@@ -8,7 +8,7 @@ import About from "./Webpages/About";
 function App() {
   return(
     <>
-      <BrowserRouter>
+      <BrowserRouter  basename={process.env.PUBLIC_URL || '/Portfolio'}>
         <Routes>
           <Route index element={<Home />}/>
           <Route path="/home" element = {<Home />}/>
